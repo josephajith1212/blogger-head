@@ -1,0 +1,22 @@
+{
+  "name": "assignment-3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "devstart": "nodemon index"
+  },
+  "author": "Ajith Joseph",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-validator": "^6.13.0",
+    "mongoose": "*",
+    "tinymce": "^5.10.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

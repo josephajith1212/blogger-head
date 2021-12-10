@@ -1,0 +1,47 @@
+<%- include('layouts/head'); -%>
+<body>
+    <%- include('layouts/nav'); -%>
+    <main>
+        <div class="main_body">
+            <table id="dbTable">
+                <thead>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>Province</th>
+                    <th>Post code</th>
+                    <th>Phone</th>
+                    <th width="18%">Email</th>
+                    <th>Product 1</th>
+                    <th>Product 2</th>
+                    <th>Product 3</th>
+                    <th>Tax</th>
+                    <th>Total</th>
+                </thead>
+                <tbody>
+                    <%
+                        for (var order of orders)
+                        {
+                    %>
+                    <tr>
+                        <td><%= order.name %></td>
+                        <td><%= order.address %></td>
+                        <td><%= order.city %></td>
+                        <td><%= order.province %></td>
+                        <td><%= order.postCode %></td>
+                        <td><%= order.phoneNum %></td>
+                        <td class="emailCol"><%= order.email %></td>
+                        <td><%= order.product1 %></td>
+                        <td><%= order.product2 %></td>
+                        <td><%= order.product3 %></td>
+                        <td>$<%= order.tax.toFixed(2) %></td>
+                        <td>$<%= (order.total + order.tax).toFixed(2) %></td>
+                    </tr>
+                    <%
+                        }
+                    %>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
