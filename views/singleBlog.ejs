@@ -1,0 +1,36 @@
+<%- include('layouts/head'); -%>
+<body>
+    <%- include('layouts/nav'); -%>
+    <main>
+        <div class="main_body">
+            <div class="blogs">
+                <h1 class="title"><%= blog.blogtitle %></h1>
+                <div>
+                    <textarea><%= blog.blogbody %></textarea>
+                </div>
+                <div class="blogButtons">
+                    <input type="button" onclick="location.href='/';" value="Back" />
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        tinymce.init({
+            readonly : 1,
+            browser_spellcheck: false,
+            branding: false,
+            elementpath: false,
+            menubar: false,
+            toolbar: false,
+            resize: false,
+            statusbar: false,
+            width: 1000,
+            height: 400,
+            skin: "oxide-dark",
+            content_css: "dark",
+            selector: 'textarea',
+            tinycomments_mode: 'embedded',
+        });
+    </script>
+</body>
+<%- include('layouts/footer'); -%>

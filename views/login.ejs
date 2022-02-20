@@ -1,0 +1,31 @@
+<%- include('layouts/head'); -%>
+<body>
+    <%- include('layouts/nav'); -%>
+    <main>
+        <div class="main_body">
+            <form action="" name="loginform" method="post">
+                <div>
+                    <label for="username">Username</label>
+                    <input id="username" name="username" type="text">
+                </div>
+                <br/>
+                <div>
+                    <label for="password">Password</label>
+                    <input id="password" type="password" name="password" type="text">
+                </div>
+                <br/>
+                <input type="submit" value="Login">
+                <p id="loginError">
+                    <%
+                        if (typeof(error)!=='undefined'){
+                    %>
+                            <%= error %>
+                    <%
+                        }
+                    %>
+                </p>
+            </form>
+        </div>
+    </main>
+</body>
+<%- include('layouts/footer'); -%>
